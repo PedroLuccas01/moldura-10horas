@@ -3,72 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>Faça sua Moldura</title>
-  <meta name="description" content="Coloque sua foto na moldura oficial e baixe para postar. Tudo acontece no seu aparelho.">
-  <meta name="theme-color" content="#2e0600">
-  <meta property="og:title" content="Faça sua Moldura">
-  <meta property="og:description" content="Coloque sua foto na moldura oficial e baixe para postar.">
+  <title>Faça sua Moldura · Despertar 2K26</title>
+  <meta name="description" content="Coloque sua foto na moldura do Despertar 2K26 e baixe para postar. Tudo acontece no seu aparelho.">
+  <meta name="theme-color" content="#140702">
+  <meta property="og:title" content="Faça sua Moldura · Despertar 2K26">
+  <meta property="og:description" content="Coloque sua foto na moldura e baixe para postar.">
   <meta property="og:image" content="/assets/preview.jpg">
   <meta property="og:type" content="website">
   <link rel="icon" href="/assets/icon.png">
   <link rel="apple-touch-icon" href="/assets/icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+  <div class="grain" aria-hidden="true"></div>
   <main class="wrap">
-    <section class="controls">
-      <p class="kicker">Moldura oficial</p>
+    <header class="head">
+      <p class="kicker"><span class="dot"></span>Despertar 2K26 <span class="sep">/</span> Conexão Jovem</p>
       <h1 class="title">
-        <span class="outline">Faça sua</span>
-        <span class="solid">Moldura</span>
+        <span class="t1">Faça</span>
+        <span class="t2"><em>sua</em> moldura</span>
       </h1>
-      <p class="lead">Suba sua foto, ajuste o enquadramento e baixe pronta para postar. Tudo acontece no seu próprio aparelho: sua foto não é enviada para nenhum servidor.</p>
-
-      <div class="step">
-        <p class="step-label">1. Sua foto</p>
-        <label class="btn btn-primary" for="file">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0-12 4.5 4.5M12 3 7.5 7.5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
-          <span id="fileLabel">Escolher foto</span>
-        </label>
-        <input id="file" type="file" accept="image/*" hidden>
-      </div>
-
-      <div class="step">
-        <p class="step-label">2. Ajuste</p>
-        <div class="zoom-row">
-          <span class="zoom-label">Zoom</span>
-          <input id="zoom" type="range" min="1" max="4" step="0.01" value="1" disabled aria-label="Zoom">
-          <button id="reset" class="btn-icon" type="button" disabled title="Centralizar" aria-label="Centralizar">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4"/></svg>
-          </button>
-        </div>
-        <p class="hint">Arraste a foto para reposicionar. No celular, use dois dedos para aproximar.</p>
-      </div>
-
-      <div class="step">
-        <p class="step-label">3. Pronto!</p>
-        <div class="actions">
-          <button id="download" class="btn btn-accent" type="button" disabled>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
-            Baixar moldura
-          </button>
-          <button id="share" class="btn btn-ghost" type="button" disabled hidden>
-            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
-            Compartilhar
-          </button>
-        </div>
-      </div>
-    </section>
+      <p class="lead">Escolha uma foto, ajuste o enquadramento e baixe pronta para postar. Tudo acontece no seu aparelho: <strong>sua foto não sai daqui.</strong></p>
+    </header>
 
     <section class="preview">
-      <div class="stage" id="stage">
+      <div class="stage">
+        <span class="tag">Prévia</span>
         <canvas id="canvas" width="1080" height="1080" aria-label="Pré-visualização da moldura"></canvas>
         <div class="loading" id="loading">Carregando moldura…</div>
       </div>
     </section>
+
+    <section class="steps">
+      <div class="step">
+        <span class="num">01</span>
+        <div class="step-body">
+          <p class="step-label">Sua foto</p>
+          <label class="btn btn-primary" for="file">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0-12 4.5 4.5M12 3 7.5 7.5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
+            <span id="fileLabel">Escolher foto</span>
+          </label>
+          <input id="file" type="file" accept="image/*" hidden>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="num">02</span>
+        <div class="step-body">
+          <p class="step-label">Ajuste</p>
+          <div class="zoom-row">
+            <span class="zoom-label">Zoom</span>
+            <input id="zoom" type="range" min="1" max="4" step="0.01" value="1" disabled aria-label="Zoom">
+            <button id="reset" class="btn-icon" type="button" disabled title="Centralizar" aria-label="Centralizar">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4"/></svg>
+            </button>
+          </div>
+          <p class="hint">Arraste a foto para reposicionar. No celular, use dois dedos para aproximar.</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <span class="num">03</span>
+        <div class="step-body">
+          <p class="step-label">Baixe e poste</p>
+          <div class="actions">
+            <button id="download" class="btn btn-accent" type="button" disabled>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"/></svg>
+              Baixar moldura
+            </button>
+            <button id="share" class="btn btn-ghost" type="button" disabled hidden>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="18" cy="5" r="2.5"/><circle cx="6" cy="12" r="2.5"/><circle cx="18" cy="19" r="2.5"/><path d="m8.2 10.8 7.6-4.4M8.2 13.2l7.6 4.4"/></svg>
+              Compartilhar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="foot">#Despertar2K26</footer>
   </main>
   <script src="/app.js"></script>
 </body>

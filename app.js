@@ -37,15 +37,18 @@
 
   function drawPlaceholder() {
     const g = ctx.createLinearGradient(0, 0, 0, SIZE);
-    g.addColorStop(0, '#7b2500');
-    g.addColorStop(1, '#2e0600');
+    g.addColorStop(0, '#5a1d06');
+    g.addColorStop(1, '#1f0c04');
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, SIZE, SIZE);
-    ctx.fillStyle = 'rgba(255,255,255,.9)';
-    ctx.font = '800 46px Montserrat, system-ui, sans-serif';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'middle';
-    ctx.fillText('SUA FOTO AQUI', SIZE / 2, 440);
+    ctx.fillStyle = '#f6e7d2';
+    ctx.font = '900 92px "Big Shoulders Display", sans-serif';
+    ctx.fillText('SUA FOTO AQUI', SIZE / 2, 420);
+    ctx.fillStyle = '#e8892b';
+    ctx.font = 'italic 44px "Instrument Serif", serif';
+    ctx.fillText('toque para escolher', SIZE / 2, 500);
   }
 
   function draw() {
